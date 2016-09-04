@@ -10,12 +10,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         try {
             int n = sc.nextInt();
-            List<Integer> ListOfInteger = new ArrayList<>(n+1);
-            ListOfInteger.add(0);
-            ListOfInteger.add(1);
-            for (int i=2;i<n+1;i++){
-                ListOfInteger.add((ListOfInteger.get(i-1)+ListOfInteger.get(i-2))%10);
-            }
             System.out.println(LastDigitOfFibonacci(n));
         } catch (InputMismatchException e){
             System.out.println("incorrect input");
@@ -27,9 +21,13 @@ public class Main {
     * Last of an i-th Fibonacci number F(i) is F(i-1)+F(i-2) mod 10
     * */
     private static int LastDigitOfFibonacci(int n){
+        List<Integer> ListOfInteger = new ArrayList<>(n+1);
+        ListOfInteger.add(0);
+        ListOfInteger.add(1);
+        for (int i=2;i<n+1;i++){
+            ListOfInteger.add((ListOfInteger.get(i-1)+ListOfInteger.get(i-2))%10);
+        }
 
-
-
-        return 0;
+        return ListOfInteger.get(n);
     }
 }
