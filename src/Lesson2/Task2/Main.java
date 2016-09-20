@@ -12,8 +12,7 @@ public class Main {
             int n = sc.nextInt();
             System.out.println(LastDigitOfFibonacci(n));
         } catch (InputMismatchException e){
-            System.out.println("incorrect input");
-        }
+            System.out.println("incorrect input");}
     }
     /*
     * this method returns last digit of a big Fibonacci number (n<=10^7)
