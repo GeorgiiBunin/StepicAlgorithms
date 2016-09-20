@@ -45,7 +45,7 @@ public class Main {
         long r = GetPisanoPeriod(m);
 
         long first = 0;
-        long second = 0;
+        long second = 1;
 
         long res = r;
         for (int i=1; i<r; i++){
