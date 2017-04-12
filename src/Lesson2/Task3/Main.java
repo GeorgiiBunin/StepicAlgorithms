@@ -38,11 +38,11 @@ public class Main {
     }
 
     /*
-    * this method returns remainder of a huge Fibonacci number (n<=10^7)
+    * this method returns remainder of a huge Fibonacci number (n<=10^18)
     * n is the index of the Fibonacci number
     * */
     private static long FibModM(long n, long m) {
-        long r = GetPisanoPeriod(m);
+        long r = n % GetPisanoPeriod(m);
 
         long first = 0;
         long second = 1;
