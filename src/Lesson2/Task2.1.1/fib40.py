@@ -1,17 +1,18 @@
-def fib_digit(n):
+def fib_array(n):
     """
 
     :type n: int
     """
+    assert n >= 0
     f = [0, 1]
     for i in range(2, n + 1):
-        f.append((f[i - 1] + f[i - 2]) % 10)
+        f.append(f[i - 1] + f[i - 2])
     return f[n]
 
 
 def main():
     n = int(input())
-    print(fib_digit(n))
+    print(fib_array(n))
 
 
 if __name__ == "__main__":

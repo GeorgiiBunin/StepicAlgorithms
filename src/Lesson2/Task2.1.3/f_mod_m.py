@@ -4,7 +4,7 @@ from builtins import range
 def get_pisano_period(m):
     a = 0
     b = 1
-    for i in range(0, m * m):
+    for i in range(6 * m):
         c = (a + b) % m
         a = b
         b = c
@@ -14,6 +14,7 @@ def get_pisano_period(m):
 
 
 def fib_mod(n, m):
+    assert n, m >= 0
     r = n % get_pisano_period(m)
 
     first = 0
